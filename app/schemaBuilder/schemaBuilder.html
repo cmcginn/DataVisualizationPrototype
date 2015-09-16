@@ -1,0 +1,37 @@
+<p>Schema Builder 1</p>
+<div ng-controller="SchemaBuilderController" ng-init="init('x')">
+    <div ng-repeat="column in schemaModel.columns">
+        <div>
+            <label>Name</label>
+            <input type="text" ng-model="column.name"/>
+        </div>
+        <div>
+            <label>Display Name</label>
+            <input type="text" ng-model="column.displayName"/>
+        </div>
+        <div>
+            <label>Data Type</label>
+            <select ng-options="columnDataType.key for columnDataType in $parent.columnDataTypes track by columnDataType.id" ng-model="column.dataType"></select>
+        </div>
+        <div>
+            <label>Ignore</label>
+            <input type="checkbox" ng-model="column.ignore" ng-true-value="true" ng-false-value="false">
+        </div>
+    </div>
+    <table>
+        <thead>
+        <th ng-repeat="column in schemaModel.columns">
+            {{column.name}}
+        </th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in sampleRows">
+            <td ng-repeat="column in row.columns">
+                {{column.value}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+

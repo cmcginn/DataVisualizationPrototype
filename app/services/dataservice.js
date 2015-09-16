@@ -1,8 +1,8 @@
 /**
  * Created by Chris on 9/16/2015.
  */
-angular.
-    module('myApp', []).factory('dataservice',['$http','$q',function($http,$q){
+
+angular.module('myApp.dataservice',[]).factory('dataservice',['$http','$q',function($http,$q){
         var apiBaseRoute = ''
         var result={
             getSchemaModelAsync:function(id){

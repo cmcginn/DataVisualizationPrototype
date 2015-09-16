@@ -3,7 +3,7 @@
  */
 'use strict';
 
-angular.module('myApp.scratch', ['ngRoute','dataservice'])
+angular.module('myApp.scratch', ['ngRoute','myApp.dataservice'])
 
     .config(['$routeProvider', function($routeProvider,dataservice) {
         $routeProvider.when('/scratch', {

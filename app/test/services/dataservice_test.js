@@ -5,8 +5,8 @@
 
 describe('myApp.dataservice module', function() {
 
-    beforeEach(module('myApp'));
-
+    //beforeEach(module('myApp'));
+    beforeEach(module('myApp.dataservice'));
     describe('dataservice get schema model', function(){
         beforeEach(inject(function($q,$http,dataservice){
             spyOn(dataservice,'getSchemaModelAsync').and.callFake(function(){
@@ -16,10 +16,7 @@ describe('myApp.dataservice module', function() {
             });
 
         }));
-
         it('should define data service....', inject(function($http,dataservice) {
-            //spec body
-            //var view1Ctrl = $controller('View1Ctrl');
             var x = "u";
             expect(dataservice).toBeDefined();
         }));
