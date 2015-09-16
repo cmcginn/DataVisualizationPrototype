@@ -10,5 +10,5 @@ angular.module('myApp.view2', ['ngRoute'])
 }])
 
 .controller('View2Ctrl', ['$scope',function($scope) {
-    $scope.viewname='View 2';
+    //$scope.viewname='View 2';
 }]);
